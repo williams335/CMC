@@ -145,7 +145,7 @@
 
     function getPlierDeplierAborescence($mois){
         $sql = "SELECT DISTINCT `Utilisateur`, count(*) as nbre_plier_deplier_arborescence FROM `transition`
-        WHERE `Titre` like '%Plier et deplier l'aborescence d'une structure' and Date_FORMAT(date, '%m'=? group by `Utilisateur`";
+        WHERE `Titre` like '%Plier et deplier l'arborescence d'une structure' and Date_FORMAT(date, '%m'=? group by `Utilisateur`";
         $req= $conn->prepare($sql);
         $req= $bin_param($mois);
         $req->execute();
